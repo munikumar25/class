@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    * objrct is collecton of elements in the form of properties and methds
+    * property is a ket value pair 
+     
+    ex:
+       var user ={
+       name : 'xyz'
+       email :xyz@gmail.com
+       mobile : 989938848
+       login : function(){
+        console.log("login success")
+       }
+    }
+
+    Ways to create object
+    1) object literal
+    2) using a new keyword with object constructor
+    3) using a new Keyword with a constuctor function
+    4) object create () method
+    5)classes
+    </pre>
+    <script>
+
+// using object literal //
+      let movies1 ={
+        name : "rrr",
+        release : 2023,
+        director : "rajamouli"
+    }
+    console.log(movies1)
+
+// how to access object values //
+// we can access values by using keys in 2ways //
+// 1) obj ["key"] -> quotes are madatory //
+     console.log(movies1["name"])
+
+// 2) obj.key //
+     console.log(movies1.release)
+
+// how to add new properties to object //
+// we can add properties by using keys in 2ways //
+    
+// update value  &  add new value//
+    movies1["budget"] = "400crs"
+    movies1.name = "a aa"
+    console.log(movies1)
+
+
+    let movies2 = {}
+    
+// 1) obj ["key"]=value
+      movies2["one"] = 1
+      console.log(movies2)
+
+// 2) obj.key = value
+      movies2.two ="2two"
+      console.log(movies2)
+
+// using new operator object constructer //
+      let movies33 = new Object()
+      movies33["name"] = "rrr";
+      movies33.director = "rajamouli";
+      console.log(movies33)
+
+// using new operator with constructer function //
+// it is used so many time //
+// step1  : create constructor function //
+      function user (n,a,p){
+        this.name = n;
+        this.age = a;
+        this.place = p
+      }
+
+// step2  : create object with constructor function call //
+      let user1 = new user("abc",16,"hyd")
+      console.log(user1)
+      console.log(user1.age)
+
+      let user2 = new user ("xyz",15,"del")
+      user2.mobile = 93747497746
+      console.log(user2)
+      console.log(user2.mobile )
+    </script>
+</body>
+</html>
